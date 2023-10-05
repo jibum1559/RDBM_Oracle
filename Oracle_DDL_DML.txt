@@ -1,0 +1,1 @@
+INSERT INTO "user" (user_id, name, age, email, hire_date, salsy)VALUES (2, 'Jane', 25, 'Jane@kh.com', TO_DATE('2023-09-25','YYYY-MM-DD'), 6000.25);
