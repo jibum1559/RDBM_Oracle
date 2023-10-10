@@ -81,7 +81,7 @@ join department d on e.dno = d.dno;
 
 --LEFT JOIN : 왼쪽 테이블의 모든 행을 반환
 --모든 부서와 부서에 속한 직원을 가져오기
---만약에 부서에 속한 직원이 ㅇ벗는 경우에는 부서 정보 포함하기
+--만약에 부서에 속한 직원이 없는 경우에는 부서 정보 포함하기
 SELECT d.dno, d.dname, e.ename
 from department d
 left join employee e on d.dno = e.eno;
