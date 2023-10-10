@@ -41,6 +41,17 @@ DQL(Data Query Language)
 -예제코드) SELECT 열이름 FROM 테이블1
           UNION
           SELECT 열이름 FROM 테이블2;
+<다시설명>
+-sql 두 개 이상의 select 문 결과를 합쳐서 하나의 결과 집합으로 반환하는 연산자
+-union 중복된 행을 제거하고 중복 된 행을 포함하지 않는 결과를 생성
+-예제코드)
+select column1, column2,...
+from table 1
+
+union 
+
+select column1, column2,...
+from table 2;
 
 *JOIN :
 -다수의 테이블을 연결하여 데이터를 결합하는 데 사용
