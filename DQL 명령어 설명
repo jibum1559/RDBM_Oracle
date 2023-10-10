@@ -70,3 +70,30 @@ DQL(Data Query Language)
 >일치하는 행이 있는 경우에는 해당 데이터를 포함
 >왼쪽 테이블 또는 오른쪽 테이블의 한쪽에만 있는 데이터는 NULL 값이 포함됨
 >주로 양쪽 테이블의 모든 데이터를 가져와야할 때 사용
+
+===================================================================
+
+--JOIN (=INNER JOIN) : 일치하는 행만 반환
+--부서와 직원 테이블을 join하여 각 직원의 부서 정보를 가져옴
+SELECT e.ENO, e.ENAME, d.dname
+FROM employee e
+join department d on e.dno = d.dno;
+
+--LEFT JOIN : 왼쪽 테이블의 모든 행을 반환
+--모든 부서와 부서에 속한 직원을 가져오기
+--만약에 부서에 속한 직원이 ㅇ벗는 경우에는 부서 정보 포함하기
+SELECT d.dno, d.dname, e.ename
+from department d
+left join employee e on d.dno = e.eno;
+
+--RIGHT JOIN : 오른쪽 테이블의 모든 행을 반환
+--모든 직원과 직원이 속한 부서 정보 가져오기
+--부서에 속하지 않은 경우도 직원 정보 포함
+SELECT e.eno, e.ename, d.dname
+FROM employee e
+right join department d on e.dno = d.dno;
+
+--FULL JOIN : 양쪽 테이블의 모든 행을 반환
+SELECT d.dno, d.dname, e.eno, e.ename
+FROM department d
+FULL JOIN employee on d.dno = e.dno;
