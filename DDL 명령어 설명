@@ -44,10 +44,22 @@ TRUNCATE(자료 버림)
 
 
 3. DROP(삭제)
-    DROP TABLE : 테이블 삭제
-    DROP VIEW : 뷰 삭제
-    DROP DATABASE : DB 삭제
-    DROP INDEX : 인덱스 삭제
+    -데이터베이스에서 객체(테이블, 뷰, 인덱스, 사용자 등)를 삭제하는데 사용되는 sql 명령어. 영구삭제
+    DROP TABLE : 테이블 삭제  
+    DROP VIEW : 뷰 삭제      
+    DROP DATABASE : DB 삭제  
+    DROP INDEX : 인덱스 삭제 
+
+    //DROP TABLE 테이블이름;
+    //DROP VIEW 뷰이름;
+    //DROP INDEX 인덱스이름;
+    //DROP USER 사용자이름;
+
+3-1. CASCADE : 
+    -해당 명령이 연결된 객체 또는 데이터 영향 주는 방식 지정
+    -주로 삭제 명령으로 사용
+    -삭제 명령이 관련된 모든 객체나 데이터를 삭제
+    -DROP TABLE 부모테이블 CASCADE CONSTRAINTS;
 
 4. GRANT(권한 부여)
     -권한을 부여하는 키워드로,
