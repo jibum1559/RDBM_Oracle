@@ -68,7 +68,7 @@ WINDOW
 	ROWS BETWEEN <시작 행> AND <끝 행>
 )
 <윈도우 함수> : 사용할 윈도우 함수 작성 
-		ex) SUM, AV< RANK 등
+		ex) SUM, AV, RANK 등
 <표현 식> : 계산을 수행할 열 또는 식
 PARTITION BY : 데이터를 파티션으로 나누는데 사용할 열을 지정
 ORDER BY : 각 파티션 내에서 행 순서를 정의하는데 사용할 열을 지정
