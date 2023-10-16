@@ -14,3 +14,23 @@
 <Oracle>
   데이터베이스 관리 시스템을 제공하는..IT기업
   이외 MySQL, SqlLite, MariaDB 등 다양한 종류 중 하나
+
+##SQL 명령어 ###
+sqlplus sys/oracle as sysdba
+ALTER SESSION SET "_ORACLE_SCRIPT" = TRUE;
+
+CREATE USER manage IDENTIFIED BY msg1234;
+GRANT CREATE SESSION TO manage;
+GRANT CREATE ANY TABLE TO manage;
+grant connect, resource, dba to manage;
+
+
+만약 manage 계정 접속하고 싶다면 : sqlplus  manage/msg1234 
+또는 연결 변경 : conn 사용자명/비밀번호 (관리자 로그인 시 as sysdba)
+
+sql 문을 가져와야 할 때
+
+명령어 
+ sqlplus 사용자이름/사용자비밀번호
+ @@sql들어있는주소(위치)\sql파일이름.sql
+ 예시 ) @@C:\Users\user1\Desktop\EMP_EXAMPLE.sql
